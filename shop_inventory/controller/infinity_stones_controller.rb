@@ -35,3 +35,9 @@ post '/infinity-stones/:id'do
   infinity_stone.update
   redirect to "infinity-stones/#{params['id']}"
 end
+
+post '/infinity-stones/:id/delete' do
+  infinity_stone = InfintyStone.find(params['id'])
+  infinity_stone.delete
+  redirect to '/infinity-stones'
+end

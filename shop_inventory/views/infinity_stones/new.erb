@@ -1,0 +1,37 @@
+<h1>Add Infinty Stone</h1>
+
+<form action="/infinity-stones" method="post">
+  <label for="stone_name">Stone Name:</label>
+  <input type="text" name="stone_name" id="stone_name">
+
+  <br>
+
+  <label for="description">Product Description:</label>
+  <input type="text" name="description" id="description">
+
+  <br>
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" name="quantity" id="quantity">
+
+  <br>
+
+  <label for="buy_cost">Purchase Cost:</label>
+  <input type="number" name="buy_cost" id="buy_cost">
+
+  <br>
+
+  <label for="sell_price">Sell Price:</label>
+  <input type="number" name="sell_price" id="sell_price">
+
+  <label for="select_manufacturer">Manufacturer Name:</label>
+    <select name="manufacturer_id" id="manufacturer_producer">
+      <% @manufacturers.each do |manufacturer| %>
+      <option value=<%= manufacturer.id %>><%= manufacturer.manufacturer_name.capitalize %></option>
+    <% end %>
+  </select>
+
+  <br>
+
+  <input type="submit" value="Add Infinity Stone">
+</form>

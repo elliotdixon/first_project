@@ -18,18 +18,19 @@ class InfintyStone
   end
 
   def save()
-    sql = "INSERT INTO infinity_stones(
-    stone_name,
-    description,
-    quantity,
-    buy_cost,
-    sell_price,
-    manufacturer_id
-    )
-    VALUES
+    sql = "INSERT INTO infinity_stones
     (
-    $1, $2, $3, $4, $5, $6
-    ) RETURNING id"
+      stone_name,
+      description,
+      quantity,
+      buy_cost,
+      sell_price,
+      manufacturer_id
+    )
+      VALUES
+    (
+      $1, $2, $3, $4, $5, $6
+    )RETURNING id"
     values = [@stone_name, @description, @quantity, @buy_cost, @sell_price, @manufacturer_id]
     result = SqlRunner.run(sql, values)
     @id = result.first["id"].to_i()

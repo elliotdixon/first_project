@@ -2,7 +2,10 @@
 
 
 <% for manufacturer in @manufacturers %>
-  <p> Manufacturer <%= manufacturer.manufacturer_name %></p>  
+  <p>ID: <%= manufacturer.id %></p>
+  <p> Manufacturer <%= manufacturer.manufacturer_name %></p>
+  <p> <a href= "/manufacturers/<%= manufacturer.id() %>">Manufacturer info</a></p>
+
   <hr>
 
 <% end %>

@@ -21,5 +21,5 @@ end
 
 get "/infinity_stones/:id" do
   @infinity_stone = InfintyStone.find(params["id"])
-  erb(:show)
+  erb(:"infinity_stones/show")
 end

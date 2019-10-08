@@ -6,11 +6,11 @@ also_reload('../models/*')
 
 get '/manufacturers' do
   @manufacturers = Manufacturer.all()
-  erb(:"manufacturers/index")
+  erb(:"manufacturer/index")
 end
 
 get '/manufacturers/new' do
-  erb(:"manufacturers/new")
+  erb(:"manufacturer/new")
 end
 
 post '/manufacturers' do

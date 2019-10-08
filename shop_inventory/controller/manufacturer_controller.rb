@@ -8,3 +8,12 @@ get '/manufacturers' do
   @manufacturers = Manufacturer.all()
   erb(:"manufacturers/index")
 end
+
+get '/manufacturers/new' do
+  erb(:"manufacturers/new")
+end
+
+post '/manufacturers' do
+  Manufacturer.new(params).save
+  redirect to '/manufacturers'
+end

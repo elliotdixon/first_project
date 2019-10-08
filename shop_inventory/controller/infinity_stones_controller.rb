@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/infinity_stone.rb')
+require_relative('../models/manufacturer.rb')
 also_reload('../models/*')
 
 get '/infinity-stones' do
@@ -10,7 +11,7 @@ end
 
 get '/infinity-stones/new' do
   @manufacturers = Manufacturer.all
-  erb(:new)
+  erb(:"infinity_stones/new")
 end
 
 post '/infinity-stones' do

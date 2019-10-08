@@ -1,4 +1,5 @@
 require_relative("../db/sql_runner")
+require_relative("manufacturer")
 
 
 class InfintyStone
@@ -11,7 +12,7 @@ class InfintyStone
     @id = options['id'].to_i if options['id']
     @stone_name = options['stone_name']
     @description = options['description']
-    @quantity = options['quality'].to_i()
+    @quantity = options['quantity'].to_i()
     @buy_cost = options['buy_cost'].to_i()
     @sell_price = options['sell_price'].to_i()
     @manufacturer_id = options['manufacturer_id'].to_i()

@@ -1,5 +1,5 @@
 <h1>Edit </h1>
-<form method="POST" action="/infinity_stones/<%= @infinity_stone.id %>">
+<form method="POST" action="/infinity-stones/<%= @infinity_stone.id %>">
   <div class="form-wrapper">
 
     <div class="form-el">
@@ -32,9 +32,9 @@
       <select name="manufacturer_id" id="manufacturer_select">
         <% @manufacturers.each do |manufacturer| %>
         <% if manufacturer.id == @infinity_stone.manufacturer_id %>
-            <option value=<%= manufacturer.id %>selected><%= manufacturer.name %></option>
+            <option value=<%= manufacturer.id %>selected><%= manufacturer.manufacturer_name %></option>
             <% else %>
-            <option value=<%= manufacturer.id %>><%= manufacturer.name %></option>
+            <option value=<%= manufacturer.id %>><%= manufacturer.manufacturer_name %></option>
             <% end %>
         <% end %>
       </select>

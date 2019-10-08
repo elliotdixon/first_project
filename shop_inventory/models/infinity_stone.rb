@@ -51,7 +51,7 @@ class InfintyStone
     $1, $2, $3, $4, $5, $6
     )
     WHERE id = $7"
-    values = [@stone_name, @description, @quantity, @buy_cost, @sell_price, @manufacturer_id]
+    values = [@stone_name, @description, @quantity, @buy_cost, @sell_price, @manufacturer_id, @id]
     SqlRunner.run(sql, values)
   end
 

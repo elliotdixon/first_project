@@ -29,7 +29,7 @@ class Manufacturer
 
   def update()
     sql = "UPDATE manufacturers SET manufacturer_name = $1 WHERE id = $2"
-    values = [@manufacturer_name]
+    values = [@manufacturer_name, @id]
     SqlRunner.run(sql, values)
   end
 

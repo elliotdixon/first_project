@@ -5,3 +5,5 @@
 <p> Buy Cost: <%= @infinity_stone.buy_cost %></p>
 <p> Sell Price: <%= @infinity_stone.sell_price %></p>
 <p> Manufacturer: <%= @infinity_stone.manufacturer.first.manufacturer_name %></p>
+<a href="/infinity-stones/<%= @infinity_stone.id %>/edit">Edit</a>
+<form action="/infinity-stones/<%= @infinity_stone.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

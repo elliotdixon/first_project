@@ -19,7 +19,19 @@ post '/infinity-stones' do
   redirect to '/infinity-stones'
 end
 
-get "/infinity_stones/:id" do
+get "/infinity-stones/:id" do
   @infinity_stone = InfintyStone.find(params["id"])
   erb(:"infinity_stones/show")
+end
+
+get '/infinity-stones/:id/edit' do
+  @manufacturers = Manufacturer.all
+  @infinity_stone = InfintyStone.find(params['id'])
+  erb(:"infinity_stones/edit")
+end
+
+post '/infinity-stones/:id'do
+  infinity_stone = InfintyStone.new(params)
+  infinity_stone.update
+  redirect to "infinity-stones/#{params['id']}"
 end

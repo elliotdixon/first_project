@@ -17,3 +17,8 @@ post '/infinity-stones' do
   InfintyStone.new(params).save
   redirect to '/infinity-stones'
 end
+
+get "/infinity-stones/:id" do
+  @infinity_stone = InfintyStone.find(params["id"])
+  erb(:show)
+end

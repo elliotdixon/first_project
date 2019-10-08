@@ -9,7 +9,7 @@ class InfintyStone
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @stone_name = options['product_name']
+    @stone_name = options['stone_name']
     @description = options['description']
     @quantity = options['quality'].to_i()
     @buy_cost = options['buy_cost'].to_i()

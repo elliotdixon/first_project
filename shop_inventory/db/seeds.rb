@@ -68,7 +68,7 @@ infinity_stone2.save()
 infinity_stone3 = InfintyStone.new({
   "stone_name" => "Reality Stone",
   "description" => "Also known as the Aether the Reality Stone under the right circumstances has the ability to flick off the
-  universe like and light switch and effectively change reality.",
+  universe like a light switch and effectively change reality.",
   "quantity" => 40,
   "buy_cost" => 80,
   "sell_price" => 120,

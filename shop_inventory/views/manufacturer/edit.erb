@@ -1,8 +1,11 @@
-<h1>Add Manufacturer</h1>
+<h1>Edit Manufacturer</h1>
 
-<form action="/manufacturers" method="post">
- <label for="manufacturer_name">Manufacturer Name:</label>
- <input type="text" name="manufacturer_name" id="manufacturer_name" value="<% manufacturer.manufacturer_name %>">
-
-  <input type="submit" value="Add Manufacturer">
+<form  method="post" action="/manufacturers/<%= @manufacturers.id %>">
+  <div class="form wrapper">
+    <div class="form el">
+      <label for="manufacturer_name">Manufacturer Name:</label>
+      <input type="text" name="manufacturer_name" id="manufacturer_name" value="<% @manufacturers.manufacturer_name %>">
+      <input type="submit" value="Edit Manufacturer">
+     </div>
+  </div>
 </form>

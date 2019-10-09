@@ -28,3 +28,15 @@ post '/manufacturers/:id/delete' do
   manufacturer.delete
   redirect to '/manufacturers'
 end
+
+get '/manufacturers/:id/edit' do
+  @infinity_stone = InfintyStone.all
+  @manufacturers = Manufacturer.find(params['id'])
+  erb(:"manufacturer/edit")
+end
+
+post '/manufacturers/:id'do
+  manufacturer = Manufacturer.new(params)
+  manufacturer.update
+  redirect to "manufacturers/#{params['id']}"
+end

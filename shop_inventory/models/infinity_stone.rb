@@ -93,4 +93,10 @@ class InfintyStone
     return infinity_stones_data.map { |infinity_stone| InfintyStone.new(infinity_stone)}
   end
 
+  def stock_count()
+   return "Out of Stock" if @quantity == 0
+   return "Stock Level Good" if @quantity >= 5
+   return "Low stock" if @quantity < 5
+ end
+
 end
